@@ -42,7 +42,13 @@ and how the owner wants to work, so any new chat can continue the work.
     automatically via a one-line script; "2026" is written in as a fallback.
     A compact logo bar (`.logo-bar`, logo at 60% of the header size, as the
     owner asked) slides in fixed at the top once the big header logo scrolls
-    out of view, and hides again at the top of the page.
+    out of view, and hides again at the top of the page. It uses
+    `assets/logos/electric-autonomy-trimmed.svg` (same logo with the empty
+    space above/below the lettering cut off) so the bar's padding is exact;
+    the owner asked for half the original spacing (16px/22px desktop,
+    13px/16px phones).
+  - Card hover: the whole card turns gold (#FFC20D); the "Learn more"
+    underline, arrow and blurb text switch to black so they stay readable.
   - `favicon.ico`, `assets/favicon-32.png`, `assets/apple-touch-icon.png` –
     the round "EA" browser-tab icon supplied by the owner
   - `styles.css` – all styling (fonts: Inter, Space Grotesk, Montserrat from
