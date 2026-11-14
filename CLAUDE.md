@@ -111,9 +111,10 @@ Update this section whenever something changes.
       (https://claude.ai/artifact/2bVm1YnPUBQqoErCJT6zMp, artboard
       "Homepage — desktop"). Photos were resized for the web.
 - [x] `CNAME` file added
-- [ ] **Real links needed:** every card's "Learn more" and the "Talk to our
-      team" button point to `#` for now (marked `TODO` in `index.html`).
-      Get each web address from the owner; don't guess.
+- [x] Real links added for 7 of the 8 cards and the "Talk to our team"
+      button (→ https://electricautonomy.ca/advertise/), as given by the owner
+- [ ] **Webinars card link still needed:** it points to `#` (marked `TODO`
+      in `index.html`). Get the address from the owner; don't guess.
 - [x] Repo made public (owner did this on 2026-11-14)
 - [ ] GitHub Pages turned on (Settings → Pages → Deploy from a branch →
       `main` / root). Do this at the first "publish", after the PR is merged.
