@@ -63,7 +63,8 @@ and how the owner wants to work, so any new chat can continue the work.
   - Card hover: the whole card turns gold (#FFC20D); the "Learn more"
     underline, arrow and blurb text switch to black so they stay readable.
   - `favicon.ico`, `assets/favicon-32.png`, `assets/apple-touch-icon.png` –
-    the round "EA" browser-tab icon supplied by the owner
+    the round "EA" browser-tab icon supplied by the owner, recoloured at the
+    owner's request to black artwork on gold (#FFC20D) background
   - `styles.css` – all styling (fonts: Inter, Space Grotesk, Montserrat from
     Google Fonts; gold accent #FFC20D)
   - `assets/logos/` – program logos; `assets/photos/` – card photos and the
