@@ -137,7 +137,8 @@ Update this section whenever something changes.
 - [x] Owner updated GoDaddy DNS (records above)
 - [x] HTTPS certificate issued; https://electricautonomy.com is live and
       www.electricautonomy.com forwards to it (confirmed 2026-11-14)
-- [ ] Owner ticks "Enforce HTTPS" in Settings → Pages (if not done yet)
+- [x] Owner ticked "Enforce HTTPS" in Settings → Pages (2026-11-14)
 - Link checks: evandchargingexpo.com and evfleets.pro block automated
   requests (Cloudflare bot protection), so a curl/headless check can show
   403 or fail even when the link is fine. Ask the owner to click those two.
+  (Owner confirmed both work on 2026-11-14.)
