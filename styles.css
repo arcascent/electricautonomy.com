@@ -160,6 +160,9 @@ html { scroll-behavior: smooth; }
 .logo-plate.tight { padding: 0 10px; }
 .logo-plate img { height: 64px; width: auto; max-width: 100%; object-fit: contain; }
 .logo-plate img.kwh { height: 92px; }
+/* EVIT: half the original visible space around the artwork (owner's request) */
+.logo-plate.evit { padding: 0 18px; }
+.logo-plate.evit img { height: 74px; }
 
 /* Text logos (Webinars / News / Content) */
 .wordmark { display: flex; flex-direction: column; justify-content: center; gap: 4px; height: 80px; }
@@ -312,6 +315,7 @@ html { scroll-behavior: smooth; }
   .card-webinar-frame img { height: 170px; }
   .logo-plate { left: 24px; max-width: calc(100% - 48px); height: 92px; }
   .logo-plate img.kwh { height: 80px; }
+  .logo-plate.evit img { height: 68px; }
   .card-body { padding: 0 24px; }
   .card-body h2 { font-size: 24px; }
   .card-body p { font-size: 16px; }

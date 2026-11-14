@@ -62,7 +62,11 @@ and how the owner wants to work, so any new chat can continue the work.
     logo), as the owner asked.
   - `assets/logos/evit-conference.svg` is the owner's outlined version
     (all shapes, no fonts). The earlier file used live text that needed
-    fonts visitors don't have, so its lettering rendered wrongly.
+    fonts visitors don't have, so its lettering rendered wrongly. Its
+    viewBox is trimmed to the artwork and its panel (`.logo-plate.evit`) has
+    half the original visible space at the owner's request: 14px top/bottom
+    and 18px sides on desktop, 11px top/bottom on phones; panel height
+    unchanged.
   - Card hover: the whole card turns gold (#FFC20D); the "Learn more"
     underline, arrow and blurb text switch to black so they stay readable.
   - `favicon.ico`, `assets/favicon-32.png`, `assets/apple-touch-icon.png` –
