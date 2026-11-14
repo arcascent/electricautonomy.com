@@ -135,6 +135,9 @@ Update this section whenever something changes.
 - [x] GitHub Pages turned on (Deploy from a branch → `main` / root),
       custom domain `electricautonomy.com`
 - [x] Owner updated GoDaddy DNS (records above)
-- [ ] Turn on "Enforce HTTPS" once the certificate is issued
-- [ ] Confirm https://electricautonomy.com and https://www.electricautonomy.com
-      both load the site
+- [x] HTTPS certificate issued; https://electricautonomy.com is live and
+      www.electricautonomy.com forwards to it (confirmed 2026-11-14)
+- [ ] Owner ticks "Enforce HTTPS" in Settings → Pages (if not done yet)
+- Link checks: evandchargingexpo.com and evfleets.pro block automated
+  requests (Cloudflare bot protection), so a curl/headless check can show
+  403 or fail even when the link is fine. Ask the owner to click those two.
