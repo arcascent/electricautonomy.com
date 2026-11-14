@@ -64,7 +64,11 @@ and how the owner wants to work, so any new chat can continue the work.
     underline, arrow and blurb text switch to black so they stay readable.
   - `favicon.ico`, `assets/favicon-32.png`, `assets/apple-touch-icon.png` –
     the round "EA" browser-tab icon supplied by the owner, recoloured at the
-    owner's request to black artwork on gold (#FFC20D) background
+    owner's request to black artwork on gold (#FFC20D). The tab icons
+    (`favicon.ico`, `favicon-32.png`) are cropped to the circle: gold only
+    inside the black ring, transparent outside. `apple-touch-icon.png`
+    (phone home screen) is the gold circle on a white square (owner chose
+    this; iPhones fill transparent areas with black).
   - `styles.css` – all styling (fonts: Inter, Space Grotesk, Montserrat from
     Google Fonts; gold accent #FFC20D)
   - `assets/logos/` – program logos; `assets/photos/` – card photos and the
