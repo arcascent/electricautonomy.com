@@ -159,7 +159,6 @@ html { scroll-behavior: smooth; }
 }
 .logo-plate.tight { padding: 0 10px; }
 .logo-plate img { height: 64px; width: auto; max-width: 100%; object-fit: contain; }
-.logo-plate img.tall { height: 96px; }
 .logo-plate img.kwh { height: 92px; }
 
 /* Text logos (Webinars / News / Content) */
@@ -312,7 +311,7 @@ html { scroll-behavior: smooth; }
   .card-photo, .card-webinar-frame, .docs { height: 200px; }
   .card-webinar-frame img { height: 170px; }
   .logo-plate { left: 24px; max-width: calc(100% - 48px); height: 92px; }
-  .logo-plate img.tall, .logo-plate img.kwh { height: 80px; }
+  .logo-plate img.kwh { height: 80px; }
   .card-body { padding: 0 24px; }
   .card-body h2 { font-size: 24px; }
   .card-body p { font-size: 16px; }
