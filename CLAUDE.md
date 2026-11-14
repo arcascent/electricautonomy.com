@@ -60,6 +60,9 @@ and how the owner wants to work, so any new chat can continue the work.
     artwork, owner's request), and its panel now uses the same settings as
     the Clean Fleet Awards panel (plain `.logo-plate`: 24px sides, 64px-tall
     logo), as the owner asked.
+  - `assets/logos/evit-conference.svg` is the owner's outlined version
+    (all shapes, no fonts). The earlier file used live text that needed
+    fonts visitors don't have, so its lettering rendered wrongly.
   - Card hover: the whole card turns gold (#FFC20D); the "Learn more"
     underline, arrow and blurb text switch to black so they stay readable.
   - `favicon.ico`, `assets/favicon-32.png`, `assets/apple-touch-icon.png` –
