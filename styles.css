@@ -64,8 +64,11 @@ h1, h2, p { margin: 0; }
   visibility: visible;
   transition: transform .25s ease;
 }
-.logo-bar img { width: 336px; max-width: 60%; height: auto; }
+.logo-bar-link { display: flex; justify-content: center; width: 336px; max-width: 60%; }
+.logo-bar img { width: 100%; height: auto; }
+html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   .logo-bar, .logo-bar.is-visible { transition: none; }
 }
 
