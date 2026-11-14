@@ -25,11 +25,12 @@ h1, h2, p { margin: 0; }
 .site-header {
   background: #0B0B0C url("assets/photos/carbon-background.jpg") center / cover no-repeat;
   border-bottom: 6px solid #FFC20D;
-  padding: 34px 32px 36px;
+  /* top padding includes the empty space that was built into the untrimmed logo, so the header top looks the same */
+  padding: 70px 32px 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 32px; /* same as the gap between the boxes */
 }
 .site-header h1 { width: 560px; max-width: 100%; }
 .site-header h1 img { width: 100%; height: auto; }
@@ -286,7 +287,7 @@ h1, h2, p { margin: 0; }
 
 /* ---------- Phones and small tablets ---------- */
 @media (max-width: 760px) {
-  .site-header { padding: 28px 20px 30px; }
+  .site-header { padding: 50px 20px 30px; gap: 24px; }
   .site-header p { font-size: 17px; }
   .programs { padding: 24px 16px; }
   .card-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
