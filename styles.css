@@ -42,18 +42,17 @@ h1, h2, p { margin: 0; }
   color: #E4E6EA;
 }
 
-/* Intro: a bold "deck" sentence, a short gold rule, then the supporting paragraph */
+/* Intro: a bold "deck" sentence on its own line, then the supporting paragraph (option B) */
 .site-header p.deck {
   font-family: "Space Grotesk", Inter, sans-serif;
   font-weight: 600;
-  font-size: 32px;
-  line-height: 1.25;
-  letter-spacing: -0.015em;
+  font-size: 28px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
   color: #FFF;
-  max-width: 860px;
+  max-width: 820px;
 }
-.deck-rule { display: block; width: 56px; height: 3px; background: #FFC20D; border-radius: 2px; margin: -12px 0; }
-.site-header p.deck-rest { font-size: 17px; line-height: 1.6; color: #C9CCD2; max-width: 700px; }
+.site-header p.deck-rest { font-size: 18px; line-height: 1.6; color: #C9CCD2; max-width: 720px; margin-top: -16px; }
 
 /* Compact logo bar (60% of the header logo), fixed to the top while scrolling */
 .logo-bar {
@@ -305,9 +304,8 @@ html { scroll-behavior: smooth; }
 @media (max-width: 760px) {
   .site-header { padding: 50px 20px 30px; gap: 24px; }
   .site-header p { font-size: 17px; }
-  .site-header p.deck { font-size: 24px; }
-  .deck-rule { margin: -8px 0; }
-  .site-header p.deck-rest { font-size: 16px; }
+  .site-header p.deck { font-size: 22px; }
+  .site-header p.deck-rest { font-size: 16px; margin-top: -10px; }
   .programs { padding: 24px 16px; }
   .card-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .card { padding-bottom: 32px; }
