@@ -46,7 +46,9 @@ and how the owner wants to work, so any new chat can continue the work.
     `assets/logos/electric-autonomy-trimmed.svg` (same logo with the empty
     space above/below the lettering cut off) so the bar's padding is exact;
     the owner asked for half the original spacing (16px/22px desktop,
-    13px/16px phones).
+    13px/16px phones). The header logo uses the same trimmed file; the gap
+    between it and the intro text matches the gap between the boxes (32px
+    desktop, 24px phones), as the owner asked.
   - Card hover: the whole card turns gold (#FFC20D); the "Learn more"
     underline, arrow and blurb text switch to black so they stay readable.
   - `favicon.ico`, `assets/favicon-32.png`, `assets/apple-touch-icon.png` –
