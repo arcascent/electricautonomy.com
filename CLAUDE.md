@@ -11,9 +11,6 @@ and how the owner wants to work, so any new chat can continue the work.
 - **What it does:** a simple one-page site that showcases Electric Autonomy
   and links to all of its other work.
 - **Owner:** not a developer. Explain everything in plain language.
-- **Sister site:** `arcascent/arcascent-website` (arcascent.com) uses the
-  same kind of setup (plain HTML on GitHub Pages with a `CNAME` file) and is a
-  useful reference.
 
 ## How the owner wants to work
 
@@ -29,7 +26,7 @@ and how the owner wants to work, so any new chat can continue the work.
 5. **Ask before guessing.** If anything is unclear (content, links, wording,
    design), ask. Don't invent copy, links, logos or facts about the company.
 6. **Steps outside GitHub:** when the owner has to do something outside
-   GitHub (Cloudflare DNS, GitHub settings, accounts), give exact,
+   GitHub (GoDaddy DNS, GitHub settings, accounts), give exact,
    numbered, click-by-click steps.
 
 ## How the site is built
@@ -60,18 +57,19 @@ and how the owner wants to work, so any new chat can continue the work.
   `/ (root)`. Every merge to `main` updates the live site automatically,
   usually within 1–2 minutes. (GitHub runs a "pages build and deployment"
   workflow, which you can check in the repo's Actions tab.)
-- **Domain/DNS:** electricautonomy.com is managed in **Cloudflare**. DNS
-  records for GitHub Pages:
-  - `A` records for `electricautonomy.com` (name `@`): `185.199.108.153`,
-    `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-  - `AAAA` records for `@` (optional, IPv6): `2606:50c0:8000::153`,
-    `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
+- **Domain/DNS:** electricautonomy.com is registered and its DNS is managed
+  at **GoDaddy** (nameservers `ns59`/`ns60.domaincontrol.com`), **not**
+  Cloudflare. Records for GitHub Pages (set up 2026-11-14):
+  - Four `A` records for `@`: `185.199.108.153`, `185.199.109.153`,
+    `185.199.110.153`, `185.199.111.153`
   - `CNAME` record `www` → `arcascent.github.io`
-  - Set the proxy status to **DNS only (grey cloud)** so GitHub can issue
-    the free HTTPS certificate. Then tick "Enforce HTTPS" in the repo's
-    Settings → Pages.
-  - Before changing DNS, check what records already exist. **Never touch
-    email records (MX, TXT for SPF/DKIM/DMARC).**
+  - GoDaddy domain forwarding was removed to free up the `@` records.
+  - **Never touch the other records.** They run company email and services:
+    Google Workspace email (MX), HubSpot email (`hs1`/`hs2` `_domainkey`
+    CNAMEs), SPF/DKIM/DMARC TXT records, Google site verification, the
+    Bluesky `_atproto` TXT record, and GoDaddy's own NS/SOA/`_domainconnect`.
+- **HTTPS:** GitHub issues a free certificate once DNS points to it. Then tick
+  "Enforce HTTPS" in the repo's Settings → Pages.
 - **Cost:** free. GitHub Pages is free for **public** repos, and this repo is
   public. Never commit passwords, keys or private documents: anyone can read
   the repo.
@@ -89,6 +87,9 @@ and how the owner wants to work, so any new chat can continue the work.
    screenshot of the live page.
 
 ### Screenshots
+
+This repo's cloud environment ("electricautonomy.com") allows the live site
+and the linked sites, so you can load the live page and test links.
 
 Use the pre-installed Playwright/Chromium against the local preview server:
 
@@ -117,9 +118,10 @@ Update this section whenever something changes.
 - Owner rule: **every link opens in a new tab** (`target="_blank"
   rel="noopener"`). Keep this for any link you add.
 - [x] Repo made public (owner did this on 2026-11-14)
-- [ ] GitHub Pages turned on (Settings → Pages → Deploy from a branch →
-      `main` / root). Do this at the first "publish", after the PR is merged.
-- [ ] Owner updates Cloudflare DNS (step-by-step instructions to be provided)
+- [x] First version published to `main` (PR #1)
+- [x] GitHub Pages turned on (Deploy from a branch → `main` / root),
+      custom domain `electricautonomy.com`
+- [x] Owner updated GoDaddy DNS (records above)
 - [ ] Turn on "Enforce HTTPS" once the certificate is issued
 - [ ] Confirm https://electricautonomy.com and https://www.electricautonomy.com
       both load the site
