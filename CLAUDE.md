@@ -51,6 +51,11 @@ and how the owner wants to work, so any new chat can continue the work.
     13px/16px phones). The header logo uses the same trimmed file; the gap
     between it and the intro text matches the gap between the boxes (32px
     desktop, 24px phones), as the owner asked.
+  - Header intro (owner chose "option C"): the first sentence is a deck
+    (`p.deck`, Space Grotesk 600, 32px desktop / 24px phones, white), then a
+    short gold rule (`.deck-rule`), then the rest in a smaller grey paragraph
+    (`p.deck-rest`). "decision&#8209;makers" uses a non-breaking hyphen so it
+    never splits across lines.
   - Card hover: the whole card turns gold (#FFC20D); the "Learn more"
     underline, arrow and blurb text switch to black so they stay readable.
   - `favicon.ico`, `assets/favicon-32.png`, `assets/apple-touch-icon.png` –
