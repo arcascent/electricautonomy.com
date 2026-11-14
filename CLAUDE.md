@@ -69,9 +69,9 @@ and how the owner wants to work, so any new chat can continue the work.
     Settings → Pages.
   - Before changing DNS, check what records already exist. **Never touch
     email records (MX, TXT for SPF/DKIM/DMARC).**
-- **Cost:** GitHub Pages is free for **public** repos. This repo is currently
-  **private**, and private repos need a paid GitHub plan for Pages. See the
-  status below for what was decided.
+- **Cost:** free. GitHub Pages is free for **public** repos, and this repo is
+  public. Never commit passwords, keys or private documents: anyone can read
+  the repo.
 
 ## Day-to-day workflow (for Claude)
 
@@ -111,8 +111,9 @@ Update this section whenever something changes.
 - [ ] **Real links needed:** every card's "Learn more" and the "Talk to our
       team" button point to `#` for now (marked `TODO` in `index.html`).
       Get each web address from the owner; don't guess.
-- [ ] Repo made public, then GitHub Pages turned on (Settings → Pages →
-      Deploy from a branch → `main` / root)
+- [x] Repo made public (owner did this on 2026-11-14)
+- [ ] GitHub Pages turned on (Settings → Pages → Deploy from a branch →
+      `main` / root). Do this at the first "publish", after the PR is merged.
 - [ ] Owner updates Cloudflare DNS (step-by-step instructions to be provided)
 - [ ] Turn on "Enforce HTTPS" once the certificate is issued
 - [ ] Confirm https://electricautonomy.com and https://www.electricautonomy.com
