@@ -1,0 +1,277 @@
+/* Electric Autonomy – electricautonomy.com
+   Colours: ink #111214, body text #3D4046, page #F4F5F6, border #D5D7DB, gold #FFC20D */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #111214;
+  background: #F4F5F6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: #111214; text-decoration: none; }
+a:hover { color: #000; }
+a:focus-visible { outline: 3px solid #FFC20D; outline-offset: 3px; }
+
+img { display: block; }
+
+h1, h2, p { margin: 0; }
+
+/* ---------- Header ---------- */
+.site-header {
+  background: #0B0B0C url("assets/photos/carbon-background.jpg") center / cover no-repeat;
+  border-bottom: 6px solid #FFC20D;
+  padding: 34px 32px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.site-header h1 { width: 560px; max-width: 100%; }
+.site-header h1 img { width: 100%; height: auto; }
+.site-header p {
+  max-width: 760px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #E4E6EA;
+}
+
+/* ---------- Cards ---------- */
+.programs {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 32px 32px;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 0 40px;
+  overflow: hidden;
+  background: #FFF;
+  border: 1px solid #D5D7DB;
+  border-radius: 14px;
+  min-height: 260px;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.card:hover { border-color: #111214; box-shadow: 0 8px 24px rgba(17, 18, 20, .08); }
+
+.card-media { position: relative; margin-bottom: 36px; }
+.card-photo { width: 100%; height: 240px; object-fit: cover; object-position: center; }
+.card-photo.top { object-position: center top; }
+.card-photo.p30 { object-position: center 30%; }
+.card-photo.p55 { object-position: center 55%; }
+.card-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(8,9,10,.62) 0%, rgba(8,9,10,.25) 35%, rgba(8,9,10,0) 60%);
+}
+.card-webinar-frame {
+  height: 240px;
+  background: #D3D5D9;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+.card-webinar-frame img {
+  height: 195px;
+  width: auto;
+  max-width: 92%;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(17, 18, 20, .18);
+}
+
+/* White logo plate overlapping the bottom of the photo */
+.logo-plate {
+  position: absolute;
+  left: 40px;
+  bottom: -36px;
+  height: 104px;
+  min-width: 200px;
+  max-width: calc(100% - 80px);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(17, 18, 20, .32);
+  border: 1px solid #D5D7DB;
+}
+.logo-plate.tight { padding: 0 10px; }
+.logo-plate img { height: 64px; width: auto; max-width: 100%; object-fit: contain; }
+.logo-plate img.tall { height: 96px; }
+.logo-plate img.kwh { height: 92px; }
+
+/* Text logos (Webinars / News / Content) */
+.wordmark { display: flex; flex-direction: column; justify-content: center; gap: 4px; height: 80px; }
+.wordmark-name {
+  font-family: Montserrat, sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+  color: #111214;
+}
+.wordmark-name svg { display: inline-block; vertical-align: baseline; height: 28px; width: 18px; margin-left: 8px; fill: #FFC20D; }
+.wordmark-sub { display: flex; align-items: center; gap: 8px; }
+.wordmark-sub span {
+  font-family: Montserrat, sans-serif;
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.wordmark-sub .ea { font-weight: 600; }
+.wordmark-sub .pill {
+  font-weight: 700;
+  line-height: 1;
+  color: #FFF;
+  background: #111214;
+  border-radius: 999px;
+  padding: 4px 8px 4px 10px;
+}
+
+.card-body { display: flex; flex-direction: column; gap: 12px; padding: 0 40px; }
+.card-body h2 {
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.card-body p { font-size: 17px; line-height: 1.55; color: #3D4046; }
+
+.card-link {
+  margin: auto 40px 0;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #FFC20D;
+  font-size: 16px;
+  font-weight: 600;
+}
+.card-link svg { width: 18px; height: 18px; fill: none; stroke: #C99700; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Content Studio illustration: three documents fanned out */
+.docs {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background: #0B0B0C url("assets/photos/carbon-background.jpg") center / cover no-repeat;
+}
+.doc {
+  position: absolute;
+  width: 124px;
+  height: 160px;
+  padding: 12px;
+  background: #FFF;
+  border-radius: 6px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .45);
+  overflow: hidden;
+}
+.doc-1 { left: 38%; top: 52px; transform: rotate(-10deg); }
+.doc-2 { left: 55%; top: 30px; transform: rotate(-1deg); }
+.doc-3 { left: 72%; top: 48px; transform: rotate(8deg); padding: 0; }
+.doc-label { font-family: Montserrat, Inter, sans-serif; font-size: 7.5px; font-weight: 700; letter-spacing: .14em; color: #111214; }
+.doc-img { height: 44px; margin-top: 7px; border-radius: 3px; background: linear-gradient(135deg, #3A3D44, #8C9099); }
+.bar { height: 5px; background: #D5D7DB; border-radius: 3px; margin-top: 6px; }
+.bar.dark { height: 6px; background: #111214; margin-top: 4px; }
+.bar.dark.first { margin-top: 8px; }
+.step { display: flex; align-items: center; gap: 6px; margin-top: 9px; }
+.step b { width: 13px; height: 13px; flex: none; border-radius: 50%; background: #FFC20D; font: 700 7px/13px Montserrat, sans-serif; text-align: center; color: #111214; }
+.step i { height: 5px; flex: 1; background: #D5D7DB; border-radius: 3px; }
+.doc-3-top { height: 70px; background: #111214; padding: 12px; }
+.doc-3-top .doc-label { color: #FFC20D; }
+.doc-3-top .bar.white { height: 6px; background: #FFF; margin-top: 9px; }
+.doc-3-top .bar.white + .bar.white { margin-top: 4px; }
+.chart { padding: 12px; display: flex; align-items: flex-end; gap: 6px; height: 78px; }
+.chart i { width: 14px; border-radius: 2px 2px 0 0; }
+
+/* ---------- Call to action band ---------- */
+.cta {
+  background: #0B0B0C url("assets/photos/carbon-background.jpg") center / cover no-repeat;
+  border-top: 6px solid #FFC20D;
+  padding: 36px 32px 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+.cta h2 {
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #FFF;
+}
+.cta p { max-width: 640px; font-size: 18px; line-height: 1.6; color: #E4E6EA; }
+.button {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: #FFC20D;
+  color: #111214;
+  font-size: 17px;
+  font-weight: 600;
+}
+.button:hover { background: #FFD24D; color: #111214; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: #0B0B0C;
+  border-top: 1px solid #2A2C30;
+  padding: 24px 32px;
+}
+.site-footer p {
+  max-width: 1136px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #A9ADB4;
+}
+.site-footer a { color: #E4E6EA; text-decoration: underline; text-underline-offset: 2px; }
+.site-footer a:hover { color: #FFC20D; }
+
+/* ---------- Phones and small tablets ---------- */
+@media (max-width: 760px) {
+  .site-header { padding: 28px 20px 30px; }
+  .site-header p { font-size: 17px; }
+  .programs { padding: 24px 16px; }
+  .card-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .card { padding-bottom: 32px; }
+  .card-photo, .card-webinar-frame, .docs { height: 200px; }
+  .card-webinar-frame img { height: 170px; }
+  .logo-plate { left: 24px; max-width: calc(100% - 48px); height: 92px; }
+  .logo-plate img.tall, .logo-plate img.kwh { height: 80px; }
+  .card-body { padding: 0 24px; }
+  .card-body h2 { font-size: 24px; }
+  .card-body p { font-size: 16px; }
+  .card-link { margin: auto 24px 0; }
+  .doc-1 { left: 18%; }
+  .doc-2 { left: 40%; }
+  .doc-3 { left: 62%; }
+  .cta { padding: 32px 20px 56px; }
+  .cta h2 { font-size: 28px; }
+  .cta p { font-size: 16px; }
+}
