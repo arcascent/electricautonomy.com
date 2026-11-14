@@ -236,6 +236,23 @@ h1, h2, p { margin: 0; }
 }
 .button:hover { background: #FFD24D; color: #111214; }
 
+/* ---------- Footer ---------- */
+.site-footer {
+  background: #0B0B0C;
+  border-top: 1px solid #2A2C30;
+  padding: 24px 32px;
+}
+.site-footer p {
+  max-width: 1136px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #A9ADB4;
+}
+.site-footer a { color: #E4E6EA; text-decoration: underline; text-underline-offset: 2px; }
+.site-footer a:hover { color: #FFC20D; }
+
 /* ---------- Phones and small tablets ---------- */
 @media (max-width: 760px) {
   .site-header { padding: 28px 20px 30px; }

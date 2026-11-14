@@ -39,7 +39,10 @@ and how the owner wants to work, so any new chat can continue the work.
 - Files (kept at the top level of the repo):
   - `index.html` – the one page: a carbon-texture header with the EA logo
     and intro, a two-column grid of program cards (photo, logo plate,
-    headline, blurb, "Learn more"), and a "Talk to our team" band
+    headline, blurb, "Learn more"), a "Talk to our team" band, and a footer
+    (copyright line plus Privacy Policy and Terms & Conditions links to
+    electricautonomy.ca, as the owner asked). The footer year updates
+    automatically via a one-line script; "2026" is written in as a fallback.
   - `styles.css` – all styling (fonts: Inter, Space Grotesk, Montserrat from
     Google Fonts; gold accent #FFC20D)
   - `assets/logos/` – program logos; `assets/photos/` – card photos and the
