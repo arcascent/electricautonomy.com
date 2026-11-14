@@ -37,9 +37,13 @@ and how the owner wants to work, so any new chat can continue the work.
 - **Plain HTML and CSS. No build step, no framework, no npm.** The page you
   edit is the page that goes live.
 - Files (kept at the top level of the repo):
-  - `index.html` – the one page
-  - `styles.css` – styling (or inline in `index.html` while the site is tiny)
-  - `assets/` – images, logo, favicon
+  - `index.html` – the one page: a carbon-texture header with the EA logo
+    and intro, a two-column grid of program cards (photo, logo plate,
+    headline, blurb, "Learn more"), and a "Talk to our team" band
+  - `styles.css` – all styling (fonts: Inter, Space Grotesk, Montserrat from
+    Google Fonts; gold accent #FFC20D)
+  - `assets/logos/` – program logos; `assets/photos/` – card photos and the
+    carbon background (resize new photos to ~1200 px wide before adding)
   - `CNAME` – contains just `electricautonomy.com` (tells GitHub Pages
     the domain)
 - Keep it simple, fast and accessible: one page, works well on phones,
@@ -95,14 +99,20 @@ owner with a short caption saying what changed.
 
 Update this section whenever something changes.
 
-- [x] Repo created (`arcascent/electricautonomy.com`, private)
+- [x] Repo created (`arcascent/electricautonomy.com`)
 - [x] CLAUDE.md added
-- [ ] **Decide hosting:** make the repo public (free GitHub Pages) or upgrade
-      the GitHub plan to keep it private
-- [ ] Get the content from the owner: intro text, the list of
-      Electric Autonomy projects/links, logo, colours
-- [ ] Build the one-page site (`index.html`)
-- [ ] Turn on GitHub Pages and add the `CNAME` file
+- [x] Hosting decided: **make the repo public** and use free GitHub Pages
+      (owner changes the visibility in GitHub settings)
+- [x] One-page site built (`index.html`, `styles.css`, `assets/`) from the
+      owner's Claude Design mockup "electricautonomy.com homepage"
+      (https://claude.ai/artifact/2bVm1YnPUBQqoErCJT6zMp, artboard
+      "Homepage — desktop"). Photos were resized for the web.
+- [x] `CNAME` file added
+- [ ] **Real links needed:** every card's "Learn more" and the "Talk to our
+      team" button point to `#` for now (marked `TODO` in `index.html`).
+      Get each web address from the owner; don't guess.
+- [ ] Repo made public, then GitHub Pages turned on (Settings → Pages →
+      Deploy from a branch → `main` / root)
 - [ ] Owner updates Cloudflare DNS (step-by-step instructions to be provided)
 - [ ] Turn on "Enforce HTTPS" once the certificate is issued
 - [ ] Confirm https://electricautonomy.com and https://www.electricautonomy.com
