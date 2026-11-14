@@ -9,6 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 </head>
 <body>
 
@@ -18,8 +21,13 @@
   <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
 </svg>
 
+<!-- Compact logo bar: slides in once the big logo has scrolled out of view -->
+<div class="logo-bar" aria-hidden="true">
+  <img src="assets/logos/electric-autonomy.svg" alt="" width="336" height="131">
+</div>
+
 <header class="site-header">
-  <h1><img src="assets/logos/electric-autonomy.svg" alt="Electric Autonomy" width="560" height="219"></h1>
+  <h1 id="main-logo"><img src="assets/logos/electric-autonomy.svg" alt="Electric Autonomy" width="560" height="219"></h1>
   <p>Electric Autonomy is an independent media and events company covering the transition to electric vehicles and clean transportation. Through our news platform, conferences, awards, training and webinars, we connect the fleets, utilities, governments and technology providers making that transition happen.</p>
 </header>
 
@@ -181,7 +189,18 @@
 <footer class="site-footer">
   <p>Copyright © <span id="year">2026</span> ArcAscent Inc. — Electric Autonomy® and all related marks are trademarks of ArcAscent Inc. — All Rights Reserved <a href="https://electricautonomy.ca/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a> - <a href="https://electricautonomy.ca/terms-and-conditions/" target="_blank" rel="noopener">Terms &amp; Conditions</a></p>
 </footer>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  // Show the compact logo bar once the big logo has scrolled off the top of the screen
+  (function () {
+    var bar = document.querySelector(".logo-bar");
+    var logo = document.getElementById("main-logo");
+    if (!("IntersectionObserver" in window)) return;
+    new IntersectionObserver(function (entries) {
+      bar.classList.toggle("is-visible", !entries[0].isIntersecting);
+    }).observe(logo);
+  })();
+</script>
 
 </body>
 </html>

@@ -41,6 +41,33 @@ h1, h2, p { margin: 0; }
   color: #E4E6EA;
 }
 
+/* Compact logo bar (60% of the header logo), fixed to the top while scrolling */
+.logo-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  padding: 12px 20px 14px;
+  background: #0B0B0C url("assets/photos/carbon-background.jpg") center / cover no-repeat;
+  border-bottom: 4px solid #FFC20D;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .25);
+  transform: translateY(-100%);
+  visibility: hidden;
+  transition: transform .25s ease, visibility 0s linear .25s;
+}
+.logo-bar.is-visible {
+  transform: none;
+  visibility: visible;
+  transition: transform .25s ease;
+}
+.logo-bar img { width: 336px; max-width: 60%; height: auto; }
+@media (prefers-reduced-motion: reduce) {
+  .logo-bar, .logo-bar.is-visible { transition: none; }
+}
+
 /* ---------- Cards ---------- */
 .programs {
   width: 100%;
