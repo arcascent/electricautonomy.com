@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 </head>
-<body>
+<body id="top">
 
 <!-- The gold "signal arcs" from the Electric Autonomy logo, reused in the text logos below -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -21,9 +21,12 @@
   <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
 </svg>
 
-<!-- Compact logo bar: slides in once the big logo has scrolled out of view -->
-<div class="logo-bar" aria-hidden="true">
-  <img src="assets/logos/electric-autonomy-trimmed.svg" alt="" width="336" height="80">
+<!-- Compact logo bar: slides in once the big logo has scrolled out of view.
+     Clicking the logo goes back to the top of the page (same tab, on purpose). -->
+<div class="logo-bar">
+  <a class="logo-bar-link" href="#top" aria-label="Back to top">
+    <img src="assets/logos/electric-autonomy-trimmed.svg" alt="" width="336" height="80">
+  </a>
 </div>
 
 <header class="site-header">
