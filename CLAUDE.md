@@ -56,6 +56,10 @@ and how the owner wants to work, so any new chat can continue the work.
     (`p.deck`, Space Grotesk 600, 28px desktop / 22px phones, white), then
     the rest in a smaller grey paragraph (`p.deck-rest`). "decision&#8209;makers" uses a non-breaking hyphen so it
     never splits across lines.
+  - `assets/logos/ev-charging-expo.svg` was trimmed (viewBox cut to the
+    artwork, owner's request), and its panel now uses the same settings as
+    the Clean Fleet Awards panel (plain `.logo-plate`: 24px sides, 64px-tall
+    logo), as the owner asked.
   - Card hover: the whole card turns gold (#FFC20D); the "Learn more"
     underline, arrow and blurb text switch to black so they stay readable.
   - `favicon.ico`, `assets/favicon-32.png`, `assets/apple-touch-icon.png` –
