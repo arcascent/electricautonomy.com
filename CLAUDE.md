@@ -54,7 +54,9 @@ and how the owner wants to work, so any new chat can continue the work.
   - Header intro (owner chose "option B"; option C with a gold rule was
     tried and dropped): the first sentence is a deck on its own line
     (`p.deck`, Space Grotesk 600, 28px desktop / 22px phones, white), then
-    the rest in a smaller grey paragraph (`p.deck-rest`). "decision&#8209;makers" uses a non-breaking hyphen so it
+    the rest in a smaller grey paragraph (`p.deck-rest`), then a repeat of
+    the gold "Talk to our team" button (`.header-button`, same link as the
+    one lower down), added at the owner's request. "decision&#8209;makers" uses a non-breaking hyphen so it
     never splits across lines.
   - `assets/logos/ev-charging-expo.svg` was trimmed (viewBox cut to the
     artwork, owner's request), and its panel now uses the same settings as

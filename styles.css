@@ -284,6 +284,7 @@ html { scroll-behavior: smooth; }
   font-weight: 600;
 }
 .button:hover { background: #FFD24D; color: #111214; }
+.site-header .header-button { margin-top: 0; }
 
 /* ---------- Footer ---------- */
 .site-footer {
