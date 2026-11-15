@@ -180,8 +180,8 @@ Update this section whenever something changes.
 - [x] Owner ticked "Enforce HTTPS" in Settings → Pages (2026-11-14)
 - [x] DNS moved from GoDaddy to Cloudflare (2026-11-15); site and HTTPS
       confirmed working afterwards
-- [ ] Owner sends a test email to an @electricautonomy.com address and
-      replies, to confirm email after the DNS move
+- [x] Email confirmed working after the DNS move (owner's send-and-reply
+      test, 2026-11-15)
 - Link checks: evandchargingexpo.com and evfleets.pro block automated
   requests (Cloudflare bot protection), so a curl/headless check can show
   403 or fail even when the link is fine. Ask the owner to click those two.
