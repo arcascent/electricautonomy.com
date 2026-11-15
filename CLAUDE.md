@@ -26,7 +26,7 @@ and how the owner wants to work, so any new chat can continue the work.
 5. **Ask before guessing.** If anything is unclear (content, links, wording,
    design), ask. Don't invent copy, links, logos or facts about the company.
 6. **Steps outside GitHub:** when the owner has to do something outside
-   GitHub (GoDaddy DNS, GitHub settings, accounts), give exact,
+   GitHub (Cloudflare DNS, GoDaddy registration, GitHub settings, accounts), give exact,
    numbered, click-by-click steps.
 
 ## How the site is built
@@ -95,17 +95,32 @@ and how the owner wants to work, so any new chat can continue the work.
   `/ (root)`. Every merge to `main` updates the live site automatically,
   usually within 1–2 minutes. (GitHub runs a "pages build and deployment"
   workflow, which you can check in the repo's Actions tab.)
-- **Domain/DNS:** electricautonomy.com is registered and its DNS is managed
-  at **GoDaddy** (nameservers `ns59`/`ns60.domaincontrol.com`), **not**
-  Cloudflare. Records for GitHub Pages (set up 2026-11-14):
+- **Domain/DNS:** electricautonomy.com is **registered at GoDaddy** (ownership
+  and yearly renewal stay there) but its **DNS is managed in Cloudflare**
+  (nameservers `opal.ns.cloudflare.com` / `remy.ns.cloudflare.com`, switched
+  from GoDaddy on 2026-11-15, same Cloudflare account as the owner's other
+  domains). Records:
   - Four `A` records for `@`: `185.199.108.153`, `185.199.109.153`,
     `185.199.110.153`, `185.199.111.153`
   - `CNAME` record `www` → `arcascent.github.io`
-  - GoDaddy domain forwarding was removed to free up the `@` records.
+  - **Every record is "DNS only" (grey cloud), on purpose.** The website
+    records must stay grey so GitHub can renew the HTTPS certificate; the
+    email records must stay grey to work. Ignore Cloudflare's "not fully
+    protected / Proxy DNS records" prompts. Cloudflare's AI/bot settings
+    therefore have no effect on this site.
   - **Never touch the other records.** They run company email and services:
-    Google Workspace email (MX), HubSpot email (`hs1`/`hs2` `_domainkey`
-    CNAMEs), SPF/DKIM/DMARC TXT records, Google site verification, the
-    Bluesky `_atproto` TXT record, and GoDaddy's own NS/SOA/`_domainconnect`.
+    Google Workspace email (5 MX), HubSpot email (`hs1-7546763._domainkey`
+    → `…hs03a.dkim.hubspotemail.net`, `hs2-7546763._domainkey` →
+    `…hs03b…`), SPF (`v=spf1 a mx include:_spf.google.com
+    include:dc-aa8e722993._spfm.electricautonomy.com include:hubspotemail.net
+    ~all`), `dc-aa8e722993._spfm` (`v=spf1 include:_spf.google.com ~all`),
+    Google DKIM (`google._domainkey`), `_dmarc`, two Google site
+    verifications, and the Bluesky `_atproto` TXT record.
+  - Cloudflare's automatic import missed the two HubSpot CNAMEs and the
+    `_spfm` TXT; they were added by hand. If DNS is ever moved again, check
+    every record above by hand.
+  - To undo the move: in GoDaddy, set the nameservers back to GoDaddy's
+    defaults (the old GoDaddy records were left in place).
 - **HTTPS:** GitHub issues a free certificate once DNS points to it. Then tick
   "Enforce HTTPS" in the repo's Settings → Pages.
 - **Cost:** free. GitHub Pages is free for **public** repos, and this repo is
@@ -163,6 +178,10 @@ Update this section whenever something changes.
 - [x] HTTPS certificate issued; https://electricautonomy.com is live and
       www.electricautonomy.com forwards to it (confirmed 2026-11-14)
 - [x] Owner ticked "Enforce HTTPS" in Settings → Pages (2026-11-14)
+- [x] DNS moved from GoDaddy to Cloudflare (2026-11-15); site and HTTPS
+      confirmed working afterwards
+- [ ] Owner sends a test email to an @electricautonomy.com address and
+      replies, to confirm email after the DNS move
 - Link checks: evandchargingexpo.com and evfleets.pro block automated
   requests (Cloudflare bot protection), so a curl/headless check can show
   403 or fail even when the link is fine. Ask the owner to click those two.
